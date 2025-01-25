@@ -1,0 +1,22 @@
+log_level: DEBUG
+
+server:
+  port: 9101
+  address: 0.0.0.0
+
+sml:
+  device: /dev/ttyUSB0
+
+metrics:
+  - name: sml_consumption
+    description: Total energy consumption in Watt-hours
+    obis_name: 1-0:1.8.0*255
+    unit: kWh
+    factor: 0.001
+
+
+  - name: sml_production
+    description: Total energy production in Watt-hours
+    obis_name: 1-0:2.8.0*255
+    unit: kWh
+    factor: 0.001
